@@ -40,11 +40,15 @@ if "messages" not in st.session_state:
     st.session_state.messages = [
         {
             "role":"system",
-            "content": f"You are a bot helping make the user object. For the founders, the objects looks like  {founder_object} and for the investor and advisory firms the objects looks like {investor_object}. Go through each field and ask questions to fill the fields with relevant data. If the field is filled with relevant data then skip it. Once all the fields are done add a <DONE> tag to the response and return the JSON object. Make sure to Go through the entire object. Be Casua, encouraging and Give examples wherever necessary. Make Sure All your questions are relevant to the fields asked and do not add any extra questions."
+            "content": f"You are a bot helping make the user object. For the founders, the objects looks like  {founder_object} and for the investor and advisory firms the objects looks like {investor_object}. Go through each field and ask questions to fill the fields with relevant data. If the field is filled with relevant data then skip it. Once all the fields are done add a <DONE> tag to the response and return the JSON object. Make sure to Go through the entire object. Do not allow any lewd responses. Be Casua, encouraging and Give examples wherever necessary. Make Sure All your questions are relevant to the fields asked and do not add any extra questions."
         },
         {
           "role":"assistant",
-          "content":"Hey, This is HUBX User Creation bot. You can ask me questions about HUBX if required. I'll need some information from you: Are you a Founder, investor or advisory"
+          "content":""" 
+          Hi, this is your HUBX AI Assistant. 
+          To help you get registered, I will need a little information from you. 
+          Are you a Company or Fund looking to raise capital, a Corporate Advisor/Broker or an Investor?
+"""
         }]
 
 # Display chat messages from history on app rerun

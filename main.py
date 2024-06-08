@@ -1,9 +1,5 @@
 import streamlit as st
 from openai import OpenAI
-import requests
-from bs4 import BeautifulSoup
-import re
-import traceback
 
 st.title("HUBX User Creation Bot")
 # Initialize chat history
